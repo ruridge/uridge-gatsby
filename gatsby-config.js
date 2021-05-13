@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Uridge Gatsby ",
+    title: "Robert Uridge",
+    siteUrl: `https://www.uridge.com`,
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
