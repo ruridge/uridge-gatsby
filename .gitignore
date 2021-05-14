@@ -1,3 +1,21 @@
+# Ignore templates from Github
+# https://github.com/github/gitignore
+
+## macOS
+# https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
+
+# General
+.DS_Store
+
+
+## Node
+# https://github.com/github/gitignore/blob/master/Node.gitignore
+
+# Dependency directories
 node_modules/
+
+# Gatsby files
 .cache/
+# Comment out the public line if your project uses Next.js and not Gatsby
+# https://nextjs.org/blog/next-9-1#public-directory-support
 public
