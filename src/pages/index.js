@@ -1,11 +1,12 @@
 import * as React from "react";
 import Seo from "../components/seo";
+import Layout from "../components/layout";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 
 function IndexPage() {
   const { title } = useSiteMetadata();
   return (
-    <>
+    <Layout>
       <Seo tile={title} />
       <div className="max-w-screen-xl px-5 mx-auto">
         <span>{title}</span>
@@ -13,7 +14,7 @@ function IndexPage() {
           Hello!!!
         </h1>
       </div>
-    </>
+    </Layout>
   );
 }
 
