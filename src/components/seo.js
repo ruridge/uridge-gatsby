@@ -7,17 +7,17 @@ import { useSiteMetadata } from "../hooks/use-site-metadata";
 const Seo = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
   const {
-    title: defaultTitle,
+    siteTitle,
     siteUrl,
     siteLanguage,
     image: defaultImage,
-    description: defaultDescription,
+    siteDescription,
     twitterUsername,
   } = useSiteMetadata();
 
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
+    title: title || siteTitle,
+    description: description || siteDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
@@ -27,7 +27,7 @@ const Seo = ({ title, description, image, article }) => {
       <html lang={siteLanguage} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      <meta property="og:site_name" content={defaultTitle}></meta>
+      <meta property="og:site_name" content={siteTitle}></meta>
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
