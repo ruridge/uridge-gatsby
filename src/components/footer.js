@@ -6,13 +6,13 @@ import GithubIcon from "../images/svg/github.inline.svg";
 import LinkedinIcon from "../images/svg/linkedin-icon.inline.svg";
 
 const linkClassNames = "text-blue-700 hover:underline";
-const iconClassNames = "text-gray-400 hover:text-gray-500";
+const iconClassNames = "text-gray-400 hover:text-gray-500 p-3";
 
 const Footer = () => {
   const { siteTitle } = useSiteMetadata();
   return (
     <footer className="p-8 text-sm text-center">
-      <div className="flex justify-center gap-1">
+      <div className="flex justify-center gap-2 mb-3">
         <a href="https://twitter.com/roburidge/" class={iconClassNames}>
           <span class="sr-only">Twitter</span>
           <TwitterIcon
