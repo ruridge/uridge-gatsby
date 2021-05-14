@@ -3,7 +3,7 @@ module.exports = {
     title: "Robert Uridge",
     siteUrl: `https://www.uridge.com`,
     siteLanguage: "en-GB",
-    image: "/images/og-thumbnail.png",
+    image: "/images/og-default.png",
     description:
       "Hi I'm Rob, a Web Developer with ten years of experience. I specialise in React applications, CSS architecture at scale and building responsive, testable and maintainable UI components.",
     twitterUsername: "@roburidge",
