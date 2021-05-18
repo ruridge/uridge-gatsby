@@ -13,37 +13,47 @@ const Footer = () => {
   return (
     <footer className="p-8 text-sm text-center">
       <div className="flex justify-center gap-2 mb-3">
-        <a href="https://twitter.com/roburidge/" class={iconClassNames}>
-          <span class="sr-only">Twitter</span>
+        <a href="https://twitter.com/roburidge/" className={iconClassNames}>
+          <span className="sr-only">Twitter</span>
           <TwitterIcon
             className="w-6 h-6"
             fill="currentColor"
             viewBox="-2 -2 28 28"
           />
         </a>
-        <a href="https://github.com/roburidge/" class={iconClassNames}>
-          <span class="sr-only">GitHub</span>
+        <a href="https://github.com/roburidge/" className={iconClassNames}>
+          <span className="sr-only">GitHub</span>
           <GithubIcon
             className="w-6 h-6"
             fill="currentColor"
             viewBox="-2 -2 28 28"
           />
         </a>
-        <a href="https://www.linkedin.com/in/roburidge/" class={iconClassNames}>
-          <span class="sr-only">LinkedIn</span>
+        <a
+          href="https://www.linkedin.com/in/roburidge/"
+          className={iconClassNames}
+        >
+          <span className="sr-only">LinkedIn</span>
           <LinkedinIcon
             className="w-6 h-6"
             fill="currentColor"
             viewBox="-2 -2 28 28"
           />
         </a>
-        <a href="mailto:rob@uridge.com" class={iconClassNames}>
-          <span class="sr-only">Email me</span>
+        <a href="mailto:rob@uridge.com" className={iconClassNames}>
+          <span className="sr-only">Email me</span>
           <MailOpenIcon className="block w-6 h-6" aria-hidden="true" />
         </a>
       </div>
       <div>
-        This site is built using{" "}
+        This site is{" "}
+        <a
+          href="https://github.com/roburidge/uridge-gatsby"
+          className={linkClassNames}
+        >
+          built in the open
+        </a>{" "}
+        using{" "}
         <a href="https://reactjs.org/" className={linkClassNames}>
           React
         </a>
@@ -54,14 +64,6 @@ const Footer = () => {
         ,{" "}
         <a href="https://tailwindcss.com/" className={linkClassNames}>
           Tailwind CSS
-        </a>
-        ,{" "}
-        <a href="https://headlessui.dev/" className={linkClassNames}>
-          Headless UI
-        </a>
-        ,{" "}
-        <a href="https://heroicons.com/" className={linkClassNames}>
-          Heroicons
         </a>
         , and hosted with{" "}
         <a
