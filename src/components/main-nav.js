@@ -29,7 +29,7 @@ function MainNav() {
 
   return (
     <nav className="bg-gray-50">
-      <div className="pl-4 pr-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="max-w-screen-xl pl-4 pr-2 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logos */}
           <div className="flex items-center flex-shrink-0">

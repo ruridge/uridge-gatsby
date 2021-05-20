@@ -8,12 +8,9 @@ function IndexPage() {
   return (
     <Layout>
       <Seo title={siteTitle} />
-      <div className="max-w-screen-xl px-5 mx-auto">
-        <span>{siteTitle}</span>
-        <h1 className="font-sans text-6xl font-medium text-purple-900">
-          Hello!!!
-        </h1>
-      </div>
+      <h1 className="font-sans text-6xl font-medium text-purple-900">
+        Hello!!!
+      </h1>
     </Layout>
   );
 }
