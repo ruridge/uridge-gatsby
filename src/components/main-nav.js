@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { Dialog, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
+import Footer from "./footer";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -107,7 +108,7 @@ function MainNav() {
               >
                 <div className="relative max-w-md" style={{ width: "80vw" }}>
                   {/* Mobile menu content */}
-                  <div className="h-full shadow-2xl bg-gray-50">
+                  <div className="flex flex-col h-full shadow-2xl bg-gray-50">
                     {/* Mobile menu header */}
                     <div className="flex items-center justify-end h-16 pl-4 pr-2">
                       {/* Mobile menu close button */}
@@ -123,8 +124,9 @@ function MainNav() {
                         <XIcon className="w-6 h-6" aria-hidden="true" />
                       </button>
                     </div>
-                    <div className="overflow-y-scroll">
-                      <div className="p-4 space-y-3">
+                    {/* Mobile menu body */}
+                    <div className="flex flex-col flex-1 overflow-y-scroll">
+                      <div className="flex-1 p-4 space-y-3">
                         {mainNavLinks.map((item) => (
                           <Link
                             key={item.name}
@@ -138,6 +140,9 @@ function MainNav() {
                             {item.name}
                           </Link>
                         ))}
+                      </div>
+                      <div className="p-4">
+                        <Footer />
                       </div>
                     </div>
                   </div>

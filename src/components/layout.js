@@ -8,7 +8,9 @@ const Layout = ({ children }) => {
     <div className="flex flex-col min-h-screen antialiased text-gray-900">
       <MainNav />
       <main className="flex-1">{children}</main>
-      <Footer />
+      <div class="p-8 hidden sm:block">
+        <Footer />
+      </div>
     </div>
   );
 };
