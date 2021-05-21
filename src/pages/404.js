@@ -7,7 +7,7 @@ function NotFoundPage() {
     <>
       <Seo title="404: Page not found" />
       <div className="flex flex-col min-h-screen">
-        <div class="flex-1 w-full flex flex-col justify-center max-w-screen-md px-6 mx-auto">
+        <div className="flex flex-col justify-center flex-1 w-full max-w-screen-md px-6 mx-auto">
           <h1 className="py-10 text-6xl font-bold lg:text-8xl">
             Page not found
           </h1>
@@ -20,7 +20,7 @@ function NotFoundPage() {
           </p>
         </div>
         <div
-          class="max-w-screen-md px-6 mx-auto w-full pt-10"
+          className="w-full max-w-screen-md px-6 pt-10 mx-auto"
           style={{ "padding-bottom": "20vh" }}
         >
           <p className="text-3xl lg:text-4xl">
