@@ -92,5 +92,12 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/snippets`,
+        name: `snippets`,
+      },
+    },
   ],
 };
