@@ -60,6 +60,7 @@ const Seo = ({ title, description, image, article }) => {
           content="Banner for uridge.com, with Rob Uridge written in white on a purple background."
         />
       )}
+      {seo.url && <link rel="canonical" href={seo.url} />}
     </Helmet>
   );
 };
