@@ -54,6 +54,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "Robert Uridge",
+        short_name: "Rob Uridge",
+        description:
+          "Hi, this is the personal website of Robert Uridge, a web developer from England, living in Taiwan.",
+        lang: "en-GB",
+        start_url: "/",
+        background_color: "#c1a8d8",
+        theme_color: "#c1a8d8",
         icon: "src/images/icon.png",
       },
     },
