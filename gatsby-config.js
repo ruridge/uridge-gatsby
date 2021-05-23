@@ -27,7 +27,30 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: "/",
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage{
+              nodes {
+                path
+              }
+            }
+          }
+        `,
+        resolvePages: ({ allSitePage }) => allSitePage.nodes,
+        serialize: (node) => ({
+          url: node.path,
+        }),
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
