@@ -19,3 +19,15 @@ node_modules/
 # Comment out the public line if your project uses Next.js and not Gatsby
 # https://nextjs.org/blog/next-9-1#public-directory-support
 public
+
+## Visual Studio Code
+# https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
+.vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
