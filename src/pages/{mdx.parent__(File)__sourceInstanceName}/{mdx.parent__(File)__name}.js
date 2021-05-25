@@ -11,7 +11,7 @@ function BlogPost({ data }) {
       </header>
       <main>
         <h1>{post.title}</h1>
-        <em>{post.date}</em> - {post.topic}
+        <em>{post.publishedOn}</em> - {post.category}
         <div dangerouslySetInnerHTML={{ __html: data.mdx.rawBody }} />
       </main>
     </div>
@@ -24,8 +24,8 @@ export const query = graphql`
   query ($id: String!) {
     mdx(id: { eq: $id }) {
       frontmatter {
-        date(formatString: "MM-DD-YYYY")
-        topic
+        publishedOn(formatString: "MM-DD-YYYY")
+        category
         title
       }
       rawBody

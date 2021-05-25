@@ -3,15 +3,19 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-const paragraphClasses = "text-xl sm:text-2xl max-w-prose pb-6";
-
 function Snippets() {
   const data = useStaticQuery(graphql`
     query SnippetsQuery {
-      snippets: allMdx {
+      snippets: allMdx(
+        sort: { fields: frontmatter___lastUpdated, order: DESC }
+        filter: { frontmatter: { isPublished: { eq: true } } }
+      ) {
         nodes {
           frontmatter {
             title
+            abstract
+            category
+            lastUpdated(formatString: "D MMMM YYYY")
           }
           parent {
             ... on File {
@@ -25,19 +29,33 @@ function Snippets() {
   return (
     <Layout>
       <Seo title="Snippets" />
-      <h1 className="pb-6 text-4xl font-extrabold text-pink-600 sm:text-5xl">
+      <h1 className="mb-2 text-4xl font-extrabold text-gray-800 sm:text-5xl">
         Snippets
       </h1>
-      <p className={paragraphClasses}>Coming soon.</p>
-      <ul>
-        {data.snippets.nodes.map((snippet) => (
-          <li key={snippet.parent.name}>
-            <Link to={`/snippets/${snippet.parent.name}`}>
+      <p className="mb-10 text-xl sm:text-2xl max-w-prose">
+        This is a collection of useful tips and code snippets I've picked up
+        along my web development journey.
+      </p>
+      {data.snippets.nodes.map((snippet) => (
+        <article className="p-4 mb-10 rounded shadow">
+          <h2 className="mb-4 text-2xl font-bold">
+            <Link
+              key={snippet.parent.name}
+              to={`/snippets/${snippet.parent.name}`}
+              className="text-blue-700 hover:underline"
+            >
               {snippet.frontmatter.title}
             </Link>
-          </li>
-        ))}
-      </ul>
+          </h2>
+          <p className="mb-4">{snippet.frontmatter.abstract}</p>
+          <dl className="text-sm">
+            <dt className="float-left pr-1 font-bold ">Category:</dt>
+            <dd>{snippet.frontmatter.category}</dd>
+            <dt className="float-left pr-1 font-bold ">Last Updated:</dt>
+            <dd>{snippet.frontmatter.lastUpdated}</dd>
+          </dl>
+        </article>
+      ))}
     </Layout>
   );
 }
