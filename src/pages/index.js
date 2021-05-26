@@ -2,18 +2,17 @@ import * as React from "react";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
-
-const paragraphClasses = "text-xl sm:text-2xl max-w-prose pb-6";
+import { Paragraph, Heading } from "../components/html-elements";
 
 function IndexPage() {
   const { siteTitle } = useSiteMetadata();
   return (
     <Layout>
       <Seo title={siteTitle} />
-      <h1 className="pb-6 text-4xl font-extrabold text-purple-600 sm:text-5xl">
+      <Heading level={1} color={Heading.color.PURPLE}>
         Hello!
-      </h1>
-      <p className={paragraphClasses}>
+      </Heading>
+      <Paragraph size={Paragraph.size.LARGE} maxWidthProse>
         You found my new website! This is very much a work in progress. I'm
         working on it in the open, so if you're interested in peeking behind the
         curtain you can{" "}
@@ -24,11 +23,11 @@ function IndexPage() {
           view the source on GitHub
         </a>
         .
-      </p>
-      <p className={paragraphClasses}>
+      </Paragraph>
+      <Paragraph size={Paragraph.size.LARGE}>
         Thanks so much for stopping by. Hope you enjoy the rest of your{" "}
         {!(new Date().getDay() % 6) ? "weekend" : "week"} ✨
-      </p>
+      </Paragraph>
     </Layout>
   );
 }
