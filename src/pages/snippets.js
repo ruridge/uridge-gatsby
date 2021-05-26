@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import * as React from "react";
+import { Heading } from "../components/html-elements";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
@@ -29,9 +30,11 @@ function Snippets() {
   return (
     <Layout>
       <Seo title="Snippets" />
-      <h1 className="mb-4 text-4xl font-extrabold text-gray-800 lg:mb-6 sm:text-5xl">
+
+      <Heading level={1} color={Heading.color.PINK}>
         Snippets
-      </h1>
+      </Heading>
+
       <p className="mb-10 text-xl sm:text-2xl max-w-prose">
         This is a collection of useful tips and code snippets I've picked up
         along my web development journey.
