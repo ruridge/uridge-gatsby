@@ -48,10 +48,12 @@ function BlogPost({ data }) {
         {post.title}
       </Heading>
       <div class="mb-8 sm:mb-16">
-        <em>
-          <strong>Originally posted:</strong> {post.publishedOn}
-        </em>{" "}
-        <strong>Category:</strong> {post.category}
+        <dl className="text-sm">
+          <dt className="float-left pr-1 font-bold ">Originally Posted:</dt>
+          <dd className="float-left pr-4">{post.publishedOn}</dd>
+          <dt className="float-left pr-1 font-bold ">Category:</dt>
+          <dd>{post.category}</dd>
+        </dl>
         {post.introduction && (
           <div class="mt-4 sm:mt-2">
             <Paragraph size={Paragraph.size.LARGE} maxWidthProse>
@@ -73,7 +75,7 @@ export const query = graphql`
   query ($id: String!) {
     mdx(id: { eq: $id }) {
       frontmatter {
-        publishedOn(formatString: "MM-DD-YYYY")
+        publishedOn(formatString: "DD MMMM YYYY")
         category
         title
         introduction
