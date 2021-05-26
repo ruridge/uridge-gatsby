@@ -12,7 +12,7 @@ const Footer = () => {
   const { siteTitle } = useSiteMetadata();
   return (
     <footer className="text-xs text-center sm:text-sm">
-      <div className="flex justify-center gap-2 mb-3">
+      <div className="flex justify-center mb-3 gap-2">
         <a href="https://twitter.com/roburidge/" className={iconClassNames}>
           <span className="sr-only">Twitter</span>
           <TwitterIcon
