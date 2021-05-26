@@ -1,20 +1,67 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXProvider } from "@mdx-js/react";
+import Layout from "../../components/layout";
+import Seo from "../../components/seo";
+import { Heading, Paragraph, CodeBlock } from "../../components/html-elements";
+
+const components = {
+  p: Paragraph,
+  h1: (props) => <Heading level={1} {...props} />,
+  h2: (props) => <Heading level={2} {...props} />,
+  h3: (props) => <Heading level={3} {...props} />,
+  h4: (props) => <Heading level={4} {...props} />,
+  h5: (props) => <Heading level={5} {...props} />,
+  h6: (props) => <Heading level={6} {...props} />,
+  ul: (props) => <ul className="pl-5 mb-4 list-disc lg:mb-6" {...props} />,
+  ol: (props) => <ol className="pl-5 mb-4 list-decimal lg:mb-6" {...props} />,
+  blockquote: (props) => (
+    <blockquote
+      className="relative pl-5 font-serif italic font-medium text-gray-900 border-l-4 border-gray-200"
+      {...props}
+    />
+  ),
+  pre: CodeBlock,
+  code: (props) => <em className="italic" {...props} />,
+  em: (props) => <em className="italic" {...props} />,
+  strong: (props) => <strong className="font-bold" {...props} />,
+  hr: (props) => (
+    <hr
+      className="block w-full h-0.5 mb-4 bg-gray-100 border-none lg:mb-6"
+      {...props}
+    />
+  ),
+  a: (props) => <a className="text-blue-700 hover:underline" {...props} />,
+  img: (props) => <img className="rounded-md" {...props} />,
+};
 
 function BlogPost({ data }) {
   const post = data.mdx.frontmatter;
 
   return (
-    <div className="wrapper">
-      <header>
-        <Link to="/">Go back to "Home"</Link>
-      </header>
-      <main>
-        <h1>{post.title}</h1>
-        <em>{post.publishedOn}</em> - {post.category}
-        <div dangerouslySetInnerHTML={{ __html: data.mdx.rawBody }} />
-      </main>
-    </div>
+    <Layout>
+      <Seo title={post.title} />
+      <Heading level={1} color={Heading.color.PINK}>
+        {post.title}
+      </Heading>
+      <div class="mb-8 sm:mb-16">
+        <em>
+          <strong>Originally posted:</strong> {post.publishedOn}
+        </em>{" "}
+        <strong>Category:</strong> {post.category}
+        {post.introduction && (
+          <div class="mt-4 sm:mt-2">
+            <Paragraph size={Paragraph.size.LARGE} maxWidthProse>
+              {post.introduction}
+            </Paragraph>
+          </div>
+        )}
+      </div>
+      <MDXProvider components={components}>
+        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      </MDXProvider>
+    </Layout>
   );
 }
 
@@ -27,8 +74,9 @@ export const query = graphql`
         publishedOn(formatString: "MM-DD-YYYY")
         category
         title
+        introduction
       }
-      rawBody
+      body
     }
   }
 `;

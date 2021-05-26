@@ -29,7 +29,7 @@ function Snippets() {
   return (
     <Layout>
       <Seo title="Snippets" />
-      <h1 className="mb-2 text-4xl font-extrabold text-gray-800 sm:text-5xl">
+      <h1 className="mb-4 text-4xl font-extrabold text-gray-800 lg:mb-6 sm:text-5xl">
         Snippets
       </h1>
       <p className="mb-10 text-xl sm:text-2xl max-w-prose">
