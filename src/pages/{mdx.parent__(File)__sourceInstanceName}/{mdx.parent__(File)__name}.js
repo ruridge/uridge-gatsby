@@ -32,7 +32,9 @@ const components = {
       {...props}
     />
   ),
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
   a: (props) => <a className="text-blue-700 hover:underline" {...props} />,
+  // eslint-disable-next-line jsx-a11y/alt-text
   img: (props) => <img className="rounded-md" {...props} />,
 };
 
