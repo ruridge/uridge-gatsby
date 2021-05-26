@@ -7,12 +7,12 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen antialiased text-gray-900">
       <div className={"bg-gray-50 main-menu"}>
-        <div className="max-w-screen-lg pl-4 pr-2 mx-auto sm:px-6 lg:px-8">
+        <div className="pl-4 pr-2 mx-auto max-w-screen-lg sm:px-6 lg:px-8">
           <MainNav />
         </div>
       </div>
       <main className="flex-1">
-        <div className="max-w-screen-lg px-4 py-6 mx-auto sm:px-6 lg:px-8 sm:py-9 lg:py-12">
+        <div className="px-4 py-6 mx-auto max-w-screen-lg sm:px-6 lg:px-8 sm:py-9 lg:py-12">
           {children}
         </div>
       </main>
