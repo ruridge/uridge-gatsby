@@ -5,7 +5,6 @@ import { useSiteMetadata } from "../hooks/use-site-metadata";
 import { Paragraph, Heading } from "../components/html-elements";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { ArrowNarrowRightIcon } from "@heroicons/react/solid";
 
 function IndexPage() {
   const { siteTitle } = useSiteMetadata();
@@ -34,13 +33,19 @@ function IndexPage() {
             {!(new Date().getDay() % 6) ? "weekend" : "week"} ✨
           </Paragraph>
         </div>
-        <div className="self-center hidden md:w-4/12 md:block">
+        <div className="self-center hidden md:block">
           <StaticImage
             className="rounded"
             src="../images/rob-head-shot-profile-photo.jpg"
             alt="Photo of Robert"
             width={274}
             height={274}
+            formats={["auto", "webp", "avif"]}
+            style={{
+              // fix for rounding images bug in Safari
+              "-webkit-backface-visibility": "hidden",
+              "-webkit-transform": "translate3d(0, 0, 0)",
+            }}
           />
         </div>
       </article>
@@ -50,26 +55,24 @@ function IndexPage() {
           <Paragraph>
             My projects/portfolio of work, past and present.
           </Paragraph>
-          <Link className="text-blue-700 hover:underline" to="/projects/">
+          <Link className="text-blue-700 group" to="/projects/">
             <div className="inline-flex items-center">
-              Go to Projects
-              <ArrowNarrowRightIcon
-                className="w-5 h-5 ml-1 text-blue-700"
-                aria-hidden="true"
-              />
+              <span className="group-hover:underline">Go to Projects</span>
+              <span aria-hidden="true" class="ml-2">
+                →
+              </span>
             </div>
           </Link>
         </article>
         <article>
           <Heading level={2}>Snippets</Heading>
           <Paragraph>A collection of useful tips and code snippets.</Paragraph>
-          <Link className="text-blue-700 hover:underline" to="/snippets/">
+          <Link className="text-blue-700 group" to="/snippets/">
             <div className="inline-flex items-center">
-              Go to Snippets
-              <ArrowNarrowRightIcon
-                className="w-5 h-5 ml-1 text-blue-700"
-                aria-hidden="true"
-              />
+              <span className="group-hover:underline">Go to Snippets</span>
+              <span aria-hidden="true" class="ml-2">
+                →
+              </span>
             </div>
           </Link>
         </article>
@@ -98,6 +101,11 @@ function IndexPage() {
               src="../images/benjamin-wong-C7u_KKSJ49I-unsplash.jpg"
               width={960}
               formats={["auto", "webp", "avif"]}
+              style={{
+                // fix for rounding images bug in Safari
+                "-webkit-backface-visibility": "hidden",
+                "-webkit-transform": "translate3d(0, 0, 0)",
+              }}
             />
             <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
@@ -113,6 +121,11 @@ function IndexPage() {
               height={500}
               width={500}
               formats={["auto", "webp", "avif"]}
+              style={{
+                // fix for rounding images bug in Safari
+                "-webkit-backface-visibility": "hidden",
+                "-webkit-transform": "translate3d(0, 0, 0)",
+              }}
             />
             <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
@@ -128,6 +141,11 @@ function IndexPage() {
               height={500}
               width={500}
               formats={["auto", "webp", "avif"]}
+              style={{
+                // fix for rounding images bug in Safari
+                "-webkit-backface-visibility": "hidden",
+                "-webkit-transform": "translate3d(0, 0, 0)",
+              }}
             />
             <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
@@ -143,6 +161,11 @@ function IndexPage() {
               height={500}
               width={500}
               formats={["auto", "webp", "avif"]}
+              style={{
+                // fix for rounding images bug in Safari
+                "-webkit-backface-visibility": "hidden",
+                "-webkit-transform": "translate3d(0, 0, 0)",
+              }}
             />
             <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
@@ -158,6 +181,11 @@ function IndexPage() {
               height={500}
               width={500}
               formats={["auto", "webp", "avif"]}
+              style={{
+                // fix for rounding images bug in Safari
+                "-webkit-backface-visibility": "hidden",
+                "-webkit-transform": "translate3d(0, 0, 0)",
+              }}
             />
             <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">

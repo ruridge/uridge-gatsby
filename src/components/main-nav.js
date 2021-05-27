@@ -33,7 +33,7 @@ function MainNav() {
         {/* Logos */}
         <div className="flex items-center flex-shrink-0">
           <Link to="/">
-            <span className="font-semibold sm:text-lg">
+            <span className="text-lg font-semibold sm:text-xl md:text-2xl">
               ROBERT<span className="font-light">URIDGE</span>
             </span>
           </Link>
@@ -78,7 +78,7 @@ function MainNav() {
         <Dialog
           as="div"
           static
-          className="fixed inset-0 overflow-hidden sm:hidden"
+          className="fixed inset-0 z-20 overflow-hidden sm:hidden"
           open={dialogOpen}
           onClose={closeDialog}
         >
@@ -92,7 +92,7 @@ function MainNav() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="absolute inset-0 bg-gray-500 transition-opacity bg-opacity-75" />
+              <Dialog.Overlay className="absolute inset-0 transition-opacity bg-gray-500 bg-opacity-75 backdrop-filter backdrop-blur-px" />
             </Transition.Child>
             <div className="fixed inset-y-0 right-0 flex max-w-full">
               <Transition.Child
@@ -104,7 +104,10 @@ function MainNav() {
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <div className="relative max-w-md" style={{ width: "80vw" }}>
+                <div
+                  className="relative max-w-md overflow-y-scroll"
+                  style={{ width: "80vw" }}
+                >
                   {/* Mobile menu content */}
                   <div className="flex flex-col h-full shadow-2xl bg-gray-50">
                     {/* Mobile menu header */}
@@ -123,7 +126,7 @@ function MainNav() {
                       </button>
                     </div>
                     {/* Mobile menu body */}
-                    <div className="flex flex-col flex-1 overflow-y-scroll">
+                    <div className="flex flex-col flex-1">
                       <div className="flex-1 p-4 space-y-3">
                         {mainNavLinks.map((item) => (
                           <Link

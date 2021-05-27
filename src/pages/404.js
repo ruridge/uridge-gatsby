@@ -1,13 +1,14 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Seo from "../components/seo";
+import { ArrowLeftIcon } from "@heroicons/react/outline";
 
 function NotFoundPage() {
   return (
     <>
       <Seo title="404: Page not found" />
       <div className="flex flex-col min-h-screen">
-        <div className="flex flex-col justify-center flex-1 w-full px-6 mx-auto max-w-screen-md">
+        <div className="flex flex-col justify-center flex-1 w-full max-w-screen-md px-6 mx-auto">
           <h1 className="py-10 text-6xl font-bold lg:text-8xl">
             Page not found
           </h1>
@@ -20,12 +21,18 @@ function NotFoundPage() {
           </p>
         </div>
         <div
-          className="w-full px-6 pt-10 mx-auto max-w-screen-md"
+          className="w-full max-w-screen-md px-6 pt-10 mx-auto"
           style={{ "padding-bottom": "20vh" }}
         >
           <p className="text-3xl lg:text-4xl">
             <Link to="/" className="text-blue-700 hover:underline">
-              Go to the homepage
+              <div className="inline-flex items-center">
+                <ArrowLeftIcon
+                  className="w-8 h-8 mr-2 text-blue-700 transform rotate-45"
+                  aria-hidden="true"
+                />
+                Go to the homepage
+              </div>
             </Link>
           </p>
         </div>
