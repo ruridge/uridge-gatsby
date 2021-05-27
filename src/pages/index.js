@@ -12,8 +12,8 @@ function IndexPage() {
   return (
     <Layout>
       <Seo title={siteTitle} />
-      <article className="flex gap-10 mb-10 md:mb-20">
-        <div>
+      <article className="flex justify-between gap-8 mb-10 md:mb-20">
+        <div className="md:w-8/12">
           <Heading level={1} color={Heading.color.PURPLE}>
             Hello!
           </Heading>
@@ -34,14 +34,15 @@ function IndexPage() {
             {!(new Date().getDay() % 6) ? "weekend" : "week"} ✨
           </Paragraph>
         </div>
-        <StaticImage
-          className="self-center hidden rounded md:block"
-          src="../images/rob-head-shot-profile-photo.jpg"
-          alt="Photo of Robert"
-          width={400}
-          height={400}
-          // aspectRatio="1.75"
-        />
+        <div className="self-center hidden md:w-4/12 md:block">
+          <StaticImage
+            className="rounded"
+            src="../images/rob-head-shot-profile-photo.jpg"
+            alt="Photo of Robert"
+            width={274}
+            height={274}
+          />
+        </div>
       </article>
       <div className="grid gap-6 mb-10 md:gap-10 sm:grid-cols-2 md:mb-20">
         <article>
