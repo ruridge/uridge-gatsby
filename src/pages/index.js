@@ -82,7 +82,7 @@ function IndexPage() {
           Life
         </Heading>
         <Paragraph size={Paragraph.size.LARGE}>
-          I was born in Sussex, lived in Yorkshire for five years, moved back
+          I grew up in Sussex, lived in Yorkshire for five years, moved back
           South in 2017 and lived in Brighton for two years before emigrating to
           Taiwan in 2019.
         </Paragraph>
