@@ -1,7 +1,13 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { Dialog, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import {
+  BookOpenIcon,
+  DocumentDuplicateIcon,
+  HomeIcon,
+  MenuIcon,
+  XIcon,
+} from "@heroicons/react/outline";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import Footer from "./footer";
 
@@ -9,15 +15,28 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function isActive(baseClassNames, isCurrentClassNames, notCurrentClassNames) {
+function isActive({ baseClasses, isCurrentClasses, notCurrentClasses }) {
   return ({ isCurrent }) => {
     return isCurrent
       ? {
-          className: `${isCurrentClassNames} ${baseClassNames}`,
+          className: `${isCurrentClasses} ${baseClasses}`,
           "aria-current": "page",
         }
-      : { className: `${notCurrentClassNames} ${baseClassNames}` };
+      : { className: `${notCurrentClasses} ${baseClasses}` };
   };
+}
+
+function getMenuIcons(href) {
+  switch (href) {
+    case "/":
+      return HomeIcon;
+    case "/projects/":
+      return BookOpenIcon;
+    case "/snippets/":
+      return DocumentDuplicateIcon;
+    default:
+      return XIcon;
+  }
 }
 
 function MainNav() {
@@ -46,11 +65,12 @@ function MainNav() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  getProps={isActive(
-                    "px-1 md:px-3 py-2 text-sm lg:text-base font-semibold",
-                    "text-gray-900",
-                    "text-gray-500 hover:text-gray-900"
-                  )}
+                  getProps={isActive({
+                    baseClasses:
+                      "px-1 md:px-3 py-2 text-sm lg:text-base font-semibold",
+                    isCurrentClasses: "text-gray-900",
+                    notCurrentClasses: "text-gray-500 hover:text-gray-900",
+                  })}
                 >
                   {item.name}
                 </Link>
@@ -92,7 +112,7 @@ function MainNav() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="absolute inset-0 transition-opacity bg-gray-500 bg-opacity-75 backdrop-filter backdrop-blur-px" />
+              <Dialog.Overlay className="absolute inset-0 transition-opacity bg-gray-500 bg-opacity-75 backdrop-filter backdrop-blur-px backdrop-grayscale" />
             </Transition.Child>
             <div className="fixed inset-y-0 right-0 flex max-w-full">
               <Transition.Child
@@ -127,20 +147,39 @@ function MainNav() {
                     </div>
                     {/* Mobile menu body */}
                     <div className="flex flex-col flex-1">
-                      <div className="flex-1 p-4 space-y-3">
-                        {mainNavLinks.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.href}
-                            getProps={isActive(
-                              "block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-700",
-                              "bg-blue-500 text-white focus:ring-offset-2",
-                              "text-gray-500 hover:bg-gray-200 hover:text-blue-500 focus:ring-inset"
-                            )}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
+                      <div className="flex-1 py-4 pr-4 space-y-3">
+                        {mainNavLinks.map((item, index) => {
+                          const delayClass = `delay-${index + 1}00`;
+                          const Icon = getMenuIcons(item.href);
+                          return (
+                            <Transition.Child
+                              as={React.Fragment}
+                              enter={`transform transition ease-in-out duration-500 ${delayClass} sm:duration-700`}
+                              enterFrom="translate-x-full"
+                              enterTo="translate-x-0"
+                              leave="transform transition ease-in-out duration-500 sm:duration-700"
+                            >
+                              <Link
+                                key={item.name}
+                                to={item.href}
+                                getProps={isActive({
+                                  baseClasses:
+                                    "block flex px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-inset border-l-8 border-transparent",
+                                  isCurrentClasses:
+                                    "text-blue-500 border-blue-500",
+                                  notCurrentClasses:
+                                    "text-gray-500 hover:text-blue-500",
+                                })}
+                              >
+                                <Icon
+                                  className="block w-6 h-6 mr-3"
+                                  aria-hidden="true"
+                                />
+                                {item.name}
+                              </Link>
+                            </Transition.Child>
+                          );
+                        })}
                       </div>
                       <div className="p-4">
                         <Footer />

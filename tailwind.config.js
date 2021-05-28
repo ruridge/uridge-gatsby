@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backdropBlur: {
         px: "1px",
+        xs: "2px",
       },
     },
   },
