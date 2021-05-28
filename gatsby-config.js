@@ -1,7 +1,8 @@
 module.exports = {
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     siteTitle: "Robert Uridge",
-    siteUrl: `https://www.uridge.com`,
+    siteUrl: "https://www.uridge.com",
     siteLanguage: "en-GB",
     image: "/images/og-default.png",
     siteDescription:
@@ -52,6 +53,21 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        sitemap: "https://www.uridge.com/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+        env: {
+          development: {
+            policy: [{ userAgent: "*", disallow: "/" }],
+          },
+          production: {
+            policy: [{ userAgent: "*", allow: "/" }],
+          },
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Robert Uridge",
@@ -93,10 +109,10 @@ module.exports = {
       __key: "pages",
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/snippets`,
-        name: `snippets`,
+        name: "snippets",
       },
     },
   ],
