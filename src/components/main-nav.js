@@ -26,6 +26,19 @@ function isActive({ baseClasses, isCurrentClasses, notCurrentClasses }) {
   };
 }
 
+function delayClass(index) {
+  switch (index) {
+    case 0:
+      return "delay-100";
+    case 1:
+      return "delay-200";
+    case 2:
+      return "delay-300";
+    default:
+      return "";
+  }
+}
+
 function getMenuIcons(href) {
   switch (href) {
     case "/":
@@ -125,7 +138,7 @@ function MainNav() {
                 leaveTo="translate-x-full"
               >
                 <div
-                  className="relative max-w-md overflow-y-scroll"
+                  className="relative max-w-md overflow-x-hidden overflow-y-scroll"
                   style={{ width: "80vw" }}
                 >
                   {/* Mobile menu content */}
@@ -149,12 +162,13 @@ function MainNav() {
                     <div className="flex flex-col flex-1">
                       <div className="flex-1 py-4 pr-4 space-y-3">
                         {mainNavLinks.map((item, index) => {
-                          const delayClass = `delay-${index + 1}00`;
                           const Icon = getMenuIcons(item.href);
                           return (
                             <Transition.Child
                               as={React.Fragment}
-                              enter={`transform transition ease-in-out duration-500 ${delayClass} sm:duration-700`}
+                              enter={`transform transition ease-in-out duration-500 ${delayClass(
+                                index
+                              )} sm:duration-700`}
                               enterFrom="translate-x-full"
                               enterTo="translate-x-0"
                               leave="transform transition ease-in-out duration-500 sm:duration-700"
