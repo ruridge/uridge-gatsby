@@ -29,7 +29,7 @@ function Paragraph({ children, size, maxWidthProse }) {
 
 Paragraph.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf("small", "medium", "large"),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   maxWidthProse: PropTypes.bool,
 };
 

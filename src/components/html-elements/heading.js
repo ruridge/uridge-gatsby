@@ -46,9 +46,9 @@ function Heading({ children, level, size = null, color }) {
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
-  level: PropTypes.oneOf(1, 2, 3, 4, 5, 6).isRequired,
-  size: PropTypes.oneOf(1, 2, 3, 4, 5, 6),
-  color: PropTypes.oneOf("gray", "green", "pink", "purple"),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  size: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  color: PropTypes.oneOf(["gray", "green", "pink", "purple"]),
 };
 
 Heading.defaultProps = {
