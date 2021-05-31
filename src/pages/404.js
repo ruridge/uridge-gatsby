@@ -8,7 +8,7 @@ function NotFoundPage() {
     <>
       <Seo title="404: Page not found" />
       <div className="flex flex-col min-h-screen">
-        <div className="flex flex-col justify-center flex-1 w-full max-w-screen-md px-6 mx-auto">
+        <div className="flex flex-col justify-center flex-1 w-full max-w-screen-md px-6 mx-auto text-gray-900">
           <h1 className="py-10 text-6xl font-bold lg:text-8xl">
             Page not found
           </h1>
@@ -28,7 +28,7 @@ function NotFoundPage() {
             <Link to="/" className="text-blue-700 hover:underline">
               <div className="inline-flex items-center">
                 <ArrowLeftIcon
-                  className="w-8 h-8 mr-2 text-blue-700 transform rotate-45"
+                  className="w-8 h-8 mr-2 transform rotate-45"
                   aria-hidden="true"
                 />
                 Go to the homepage

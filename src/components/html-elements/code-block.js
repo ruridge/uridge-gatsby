@@ -1,6 +1,6 @@
 import * as React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/github";
+import theme from "prism-react-renderer/themes/vsLight";
 import classNames from "../../utils/class-names";
 
 function CodeBlock(props) {
@@ -19,7 +19,7 @@ function CodeBlock(props) {
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
-          className={classNames(className, "rounded-md")}
+          className={classNames(className, "rounded-md border mb-4 lg:mb-6")}
           style={{ ...style, padding: "20px" }}
         >
           <div>
