@@ -7,7 +7,7 @@ import { Heading, Paragraph } from "../components/html-elements";
 import classNames from "../utils/class-names";
 
 function isOdd(num) {
-  return num % 2;
+  return Boolean(num % 2);
 }
 
 const projectClasses = {
