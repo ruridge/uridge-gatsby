@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as React from "react";
 import Layout from "../components/layout";
@@ -27,12 +27,14 @@ function ProjectsPage() {
         nodes {
           frontmatter {
             title
-            abstract
-            category
+            role
+            introduction
+            link
+            linkText
             lastUpdated(formatString: "D MMMM YYYY")
             image {
               childImageSharp {
-                gatsbyImageData(width: 600)
+                gatsbyImageData(width: 574)
               }
             }
           }
@@ -79,12 +81,30 @@ function ProjectsPage() {
             </div>
             <div
               className={classNames(
-                "md:relative md:w-96 flex-none md:px-8 py-6 md:rounded md:shadow-2xl md:bg-white md:top-10 h-96",
+                "md:relative md:w-96 flex-none md:px-8 py-6 md:rounded md:shadow-2xl md:bg-white md:top-10",
                 projectClasses.copy(index)
               )}
             >
               <Heading level={2}>{project.frontmatter.title}</Heading>
-              <Paragraph>{project.frontmatter.abstract}</Paragraph>
+              <Paragraph size={Paragraph.size.SMALL}>
+                <strong>Role:</strong> {project.frontmatter.role}
+              </Paragraph>
+              <Paragraph>{project.frontmatter.introduction}</Paragraph>
+              {project.frontmatter.link && (
+                <Link
+                  to={project.frontmatter.link}
+                  className="text-blue-700 group"
+                >
+                  <div className="inline-flex items-center mb-4 lg:mb-6">
+                    <span className="group-hover:underline">
+                      {project.frontmatter.linkText || "Visit the site"}
+                    </span>
+                    <span aria-hidden="true" class="ml-2">
+                      →
+                    </span>
+                  </div>
+                </Link>
+              )}
             </div>
           </article>
         ))}
