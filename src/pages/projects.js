@@ -11,9 +11,10 @@ function isOdd(num) {
 }
 
 const projectClasses = {
-  container: (position) => (isOdd(position) ? "flex-row-reverse" : "flex-row"),
-  image: (position) => (isOdd(position) ? "right-8" : "left-8"),
-  copy: (position) => (isOdd(position) ? "left-16" : "right-16"),
+  container: (position) =>
+    isOdd(position) ? "md:flex-row-reverse" : "md:flex-row",
+  image: (position) => (isOdd(position) ? "md:right-8" : "md:left-8"),
+  copy: (position) => (isOdd(position) ? "md:left-16" : "md:right-16"),
 };
 
 function ProjectsPage() {
@@ -60,32 +61,30 @@ function ProjectsPage() {
         .map((project, index) => (
           <article
             className={classNames(
-              "relative flex pt-12 pb-20",
+              "flex pt-12 pb-20 flex-col md:relative",
               projectClasses.container(index)
             )}
           >
             <div
               className={classNames(
-                "relative w-3/5",
+                "md:relative md:w-3/5",
                 projectClasses.image(index)
               )}
             >
               <GatsbyImage
                 image={getImage(project.frontmatter.image)}
                 alt=""
-                className="border rounded shadow-md"
+                className="border rounded md:shadow-md"
               />
             </div>
             <div
               className={classNames(
-                "relative w-2/5 px-8 py-6 rounded shadow-2xl bg-white top-10 h-96",
+                "md:relative md:w-96 flex-none md:px-8 py-6 md:rounded md:shadow-2xl md:bg-white md:top-10 h-96",
                 projectClasses.copy(index)
               )}
             >
-              <h2 className="mb-4 text-2xl font-bold">
-                {project.frontmatter.title}
-              </h2>
-              <p className="mb-4">{project.frontmatter.abstract}</p>
+              <Heading level={2}>{project.frontmatter.title}</Heading>
+              <Paragraph>{project.frontmatter.abstract}</Paragraph>
             </div>
           </article>
         ))}
