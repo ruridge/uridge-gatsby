@@ -25,9 +25,10 @@ const Seo = ({ title, description, image, article }) => {
   return (
     <Helmet title={seo.title}>
       <html lang={siteLanguage} />
+      <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      <meta property="og:site_name" content={siteTitle}></meta>
+      <meta property="og:site_name" content={siteTitle} />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 

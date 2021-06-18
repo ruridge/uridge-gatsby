@@ -39,7 +39,7 @@ function IndexPage() {
             src="../images/rob-head-shot-profile-photo.jpg"
             alt="Photo of Robert"
             width={274}
-            height={274}
+            aspectRatio={1}
             formats={["auto", "webp", "avif"]}
             style={{
               // fix for rounding images bug in Safari
@@ -98,8 +98,8 @@ function IndexPage() {
           <figure className="relative col-span-2">
             <StaticImage
               className="rounded"
-              src="../images/benjamin-wong-C7u_KKSJ49I-unsplash.jpg"
-              width={960}
+              src="../images/timo-volz-9-JFZIORoRw-unsplash.jpg"
+              width={992}
               formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari
@@ -118,8 +118,8 @@ function IndexPage() {
             <StaticImage
               className="rounded"
               src="../images/sam-rudkin-millichamp-sb6bReNb9ng-unsplash.jpg"
-              height={500}
-              width={500}
+              width={494}
+              aspectRatio={1}
               formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari
@@ -138,8 +138,8 @@ function IndexPage() {
             <StaticImage
               className="rounded"
               src="../images/gary-butterfield--lIVRZolbtM-unsplash.jpg"
-              height={500}
-              width={500}
+              width={494}
+              aspectRatio={1}
               formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari
@@ -158,8 +158,8 @@ function IndexPage() {
             <StaticImage
               className="rounded"
               src="../images/karl-moran-JBJmXBiCBPk-unsplash.jpg"
-              height={500}
-              width={500}
+              width={494}
+              aspectRatio={1}
               formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari
@@ -178,8 +178,8 @@ function IndexPage() {
             <StaticImage
               className="rounded"
               src="../images/sam-knight-jhpL88kP7Y8-unsplash.jpg"
-              height={500}
-              width={500}
+              width={494}
+              aspectRatio={1}
               formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari

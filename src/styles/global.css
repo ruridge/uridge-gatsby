@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .safe-x {
+    @apply px-4;
+  }
+  @screen sm {
+    .safe-x {
+      @apply px-10;
+    }
+  }
+  @supports (padding: max(0px)) {
+    .safe-x {
+      padding-left: max(theme("spacing.4"), env(safe-area-inset-left));
+      padding-right: max(theme("spacing.4"), env(safe-area-inset-right));
+    }
+  }
+  .safe-t {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-b {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
