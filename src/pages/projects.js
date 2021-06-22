@@ -76,12 +76,12 @@ function ProjectsPage() {
               <GatsbyImage
                 image={getImage(project.frontmatter.image)}
                 alt=""
-                className="border rounded md:shadow-md"
+                className="border border-gray-200 rounded dark:border-gray-900 md:shadow-md"
               />
             </div>
             <div
               className={classNames(
-                "md:relative md:w-96 flex-none md:px-8 py-6 md:rounded md:shadow-2xl md:bg-white md:top-10",
+                "md:relative md:w-96 flex-none md:px-8 py-6 md:rounded md:shadow-2xl md:bg-white md:top-10 md:dark:bg-gray-900",
                 projectClasses.copy(index)
               )}
             >
@@ -93,7 +93,7 @@ function ProjectsPage() {
               {project.frontmatter.link && (
                 <Link
                   to={project.frontmatter.link}
-                  className="text-blue-700 group"
+                  className="hover:no-underline group"
                 >
                   <div className="inline-flex items-center mb-4 lg:mb-6">
                     <span className="group-hover:underline">

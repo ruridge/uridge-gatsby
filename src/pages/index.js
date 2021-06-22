@@ -20,10 +20,7 @@ function IndexPage() {
             You found my new website! This is very much a work in progress. I'm
             working on it in the open, so if you're interested in peeking behind
             the curtain you can{" "}
-            <a
-              className="text-blue-700 hover:underline"
-              href="https://github.com/roburidge/uridge-gatsby"
-            >
+            <a href="https://github.com/roburidge/uridge-gatsby">
               view the source on GitHub
             </a>
             .
@@ -55,7 +52,7 @@ function IndexPage() {
           <Paragraph>
             My projects/portfolio of work, past and present.
           </Paragraph>
-          <Link className="text-blue-700 group" to="/projects/">
+          <Link className="group hover:no-underline" to="/projects/">
             <div className="inline-flex items-center">
               <span className="group-hover:underline">Go to Projects</span>
               <span aria-hidden="true" class="ml-2">
@@ -67,7 +64,7 @@ function IndexPage() {
         <article>
           <Heading level={2}>Snippets</Heading>
           <Paragraph>A collection of useful tips and code snippets.</Paragraph>
-          <Link className="text-blue-700 group" to="/snippets/">
+          <Link className="group hover:no-underline" to="/snippets/">
             <div className="inline-flex items-center">
               <span className="group-hover:underline">Go to Snippets</span>
               <span aria-hidden="true" class="ml-2">

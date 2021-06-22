@@ -64,7 +64,10 @@ function MainNav() {
       <nav className="flex items-center justify-between h-16 lg:h-20">
         {/* Logos */}
         <div className="flex items-center flex-shrink-0">
-          <Link to="/">
+          <Link
+            to="/"
+            className="text-gray-900 dark:text-gray-100 hover:no-underline"
+          >
             <span className="text-lg font-semibold sm:text-xl md:text-2xl">
               ROBERT<span className="font-light">URIDGE</span>
             </span>
@@ -81,8 +84,9 @@ function MainNav() {
                   getProps={isActive({
                     baseClasses:
                       "px-1 md:px-3 py-2 text-sm lg:text-base font-semibold",
-                    isCurrentClasses: "text-gray-900",
-                    notCurrentClasses: "text-gray-500 hover:text-gray-900",
+                    isCurrentClasses: "text-gray-900 dark:text-gray-100",
+                    notCurrentClasses:
+                      "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100",
                   })}
                 >
                   {item.name}

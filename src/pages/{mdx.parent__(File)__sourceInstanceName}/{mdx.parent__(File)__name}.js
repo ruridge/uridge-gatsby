@@ -18,7 +18,7 @@ const components = {
   ol: (props) => <ol className="pl-5 mb-4 list-decimal lg:mb-6" {...props} />,
   blockquote: (props) => (
     <blockquote
-      className="relative pl-5 font-serif italic font-medium text-gray-900 border-l-4 border-gray-200"
+      className="relative pl-5 font-serif italic font-medium border-l-4 border-gray-200"
       {...props}
     />
   ),

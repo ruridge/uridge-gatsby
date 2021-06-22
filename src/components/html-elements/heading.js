@@ -16,10 +16,10 @@ const Color = {
   PURPLE: "purple",
 };
 const COLOR_MAP = {
-  [Color.GRAY]: "text-gray-800",
-  [Color.GREEN]: "text-green-600",
-  [Color.PINK]: "text-pink-600",
-  [Color.PURPLE]: "text-purple-600",
+  [Color.GRAY]: "text-gray-800 dark:text-gray-200",
+  [Color.GREEN]: "text-green-600 dark:text-green-400",
+  [Color.PINK]: "text-pink-600 dark:text-pink-400",
+  [Color.PURPLE]: "text-purple-600 dark:text-purple-400",
 };
 const SIZE_MAP = {
   1: "text-4xl font-extrabold sm:text-5xl",

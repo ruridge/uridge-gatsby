@@ -48,7 +48,6 @@ function Snippets() {
               <Link
                 key={snippet.parent.name}
                 to={`/snippets/${snippet.parent.name}`}
-                className="text-blue-700 hover:underline"
               >
                 {snippet.frontmatter.title}
               </Link>
