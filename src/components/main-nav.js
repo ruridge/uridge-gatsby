@@ -129,7 +129,7 @@ function MainNav() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="absolute inset-0 transition-opacity bg-gray-500 bg-opacity-75 backdrop-filter backdrop-blur-px backdrop-grayscale" />
+              <Dialog.Overlay className="absolute inset-0 transition-opacity bg-gray-500 bg-opacity-75 dark:bg-black backdrop-filter backdrop-blur-px backdrop-grayscale" />
             </Transition.Child>
             <div className="fixed inset-y-0 right-0 flex max-w-full">
               <Transition.Child
@@ -146,7 +146,7 @@ function MainNav() {
                   style={{ width: "80vw" }}
                 >
                   {/* Mobile menu content */}
-                  <div className="flex flex-col h-full shadow-2xl bg-gray-50">
+                  <div className="flex flex-col h-full shadow-2xl bg-gray-50 dark:bg-gray-900">
                     {/* Mobile menu header */}
                     <div className="flex items-center justify-end h-16 pl-4 pr-2">
                       {/* Mobile menu close button */}
@@ -199,7 +199,7 @@ function MainNav() {
                           );
                         })}
                       </div>
-                      <div className="p-4">
+                      <div className="p-4 dark:text-gray-100">
                         <Footer />
                       </div>
                     </div>
