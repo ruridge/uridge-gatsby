@@ -65,6 +65,16 @@ const Seo = ({ title, description, image, article }) => {
         />
       )}
       {seo.url && <link rel="canonical" href={seo.url} />}
+      <meta
+        name="theme-color"
+        content="#fdfdfd"
+        media="(prefers-color-scheme: light)"
+      />
+      <meta
+        name="theme-color"
+        content="#161f2c"
+        media="(prefers-color-scheme: dark)"
+      />
     </Helmet>
   );
 };
