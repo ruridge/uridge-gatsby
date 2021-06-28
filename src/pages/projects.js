@@ -63,7 +63,7 @@ function ProjectsPage() {
         .map((project, index) => (
           <article
             className={classNames(
-              "flex pt-12 pb-20 flex-col md:relative",
+              "flex flex-col pb-6 md:relative md:pt-12 md:pb-20 ",
               projectClasses.container(index)
             )}
           >
