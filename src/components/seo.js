@@ -24,7 +24,7 @@ const Seo = ({ title, description, image, article }) => {
 
   return (
     <Helmet title={seo.title}>
-      <html lang={siteLanguage} />
+      <html lang={siteLanguage} className="bg-theme-light dark:bg-theme-dark" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, viewport-fit=cover"
@@ -72,7 +72,7 @@ const Seo = ({ title, description, image, article }) => {
       />
       <meta
         name="theme-color"
-        content="#161f2c"
+        content="#151c2a"
         media="(prefers-color-scheme: dark)"
       />
     </Helmet>

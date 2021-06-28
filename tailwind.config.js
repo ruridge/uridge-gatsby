@@ -7,6 +7,10 @@ module.exports = {
         px: "1px",
         xs: "2px",
       },
+      colors: {
+        "theme-light": "#fdfdfd",
+        "theme-dark": "#151c2a",
+      },
     },
   },
   variants: {
