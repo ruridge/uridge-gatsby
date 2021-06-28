@@ -5,7 +5,6 @@ import TwitterIcon from "../images/svg/twitter.inline.svg";
 import GithubIcon from "../images/svg/github.inline.svg";
 import LinkedinIcon from "../images/svg/linkedin-icon.inline.svg";
 
-const linkClassNames = "text-blue-700 hover:underline dark:text-blue-400";
 const iconClassNames =
   "text-gray-400 hover:text-gray-500 p-3 dark:hover:text-gray-100";
 
@@ -48,32 +47,13 @@ const Footer = () => {
       </div>
       <div>
         This site is{" "}
-        <a
-          href="https://github.com/roburidge/uridge-gatsby"
-          className={linkClassNames}
-        >
+        <a href="https://github.com/roburidge/uridge-gatsby">
           built in the open
         </a>{" "}
-        using{" "}
-        <a href="https://reactjs.org/" className={linkClassNames}>
-          React
-        </a>
-        ,{" "}
-        <a href="https://www.gatsbyjs.com/" className={linkClassNames}>
-          Gatsby
-        </a>
-        ,{" "}
-        <a href="https://tailwindcss.com/" className={linkClassNames}>
-          Tailwind CSS
-        </a>
-        , and hosted with{" "}
-        <a
-          href="https://www.gatsbyjs.com/products/cloud/"
-          className={linkClassNames}
-        >
-          Gatsby Cloud
-        </a>
-        .
+        using <a href="https://reactjs.org/">React</a>,{" "}
+        <a href="https://www.gatsbyjs.com/">Gatsby</a>,{" "}
+        <a href="https://tailwindcss.com/">Tailwind CSS</a>, and hosted with{" "}
+        <a href="https://www.gatsbyjs.com/products/cloud/">Gatsby Cloud</a>.
       </div>
       ~
       <div>

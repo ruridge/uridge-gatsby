@@ -32,7 +32,7 @@ function IndexPage() {
         </div>
         <div className="self-center hidden md:block">
           <StaticImage
-            className="rounded"
+            className="rounded-lg"
             src="../images/rob-head-shot-profile-photo.jpg"
             alt="Photo of Robert"
             width={274}
@@ -104,7 +104,7 @@ function IndexPage() {
                 "-webkit-transform": "translate3d(0, 0, 0)",
               }}
             />
-            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
+            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b-lg bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
                 Taipei
               </p>
@@ -113,7 +113,7 @@ function IndexPage() {
           </figure>
           <figure className="relative">
             <StaticImage
-              className="rounded"
+              className="rounded-lg"
               src="../images/sam-rudkin-millichamp-sb6bReNb9ng-unsplash.jpg"
               width={494}
               aspectRatio={1}
@@ -124,7 +124,7 @@ function IndexPage() {
                 "-webkit-transform": "translate3d(0, 0, 0)",
               }}
             />
-            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
+            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b-lg bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
                 Brighton
               </p>
@@ -133,7 +133,7 @@ function IndexPage() {
           </figure>
           <figure className="relative">
             <StaticImage
-              className="rounded"
+              className="rounded-lg"
               src="../images/gary-butterfield--lIVRZolbtM-unsplash.jpg"
               width={494}
               aspectRatio={1}
@@ -144,7 +144,7 @@ function IndexPage() {
                 "-webkit-transform": "translate3d(0, 0, 0)",
               }}
             />
-            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
+            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b-lg bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
                 Leeds
               </p>
@@ -153,7 +153,7 @@ function IndexPage() {
           </figure>
           <figure className="relative">
             <StaticImage
-              className="rounded"
+              className="rounded-lg"
               src="../images/karl-moran-JBJmXBiCBPk-unsplash.jpg"
               width={494}
               aspectRatio={1}
@@ -164,7 +164,7 @@ function IndexPage() {
                 "-webkit-transform": "translate3d(0, 0, 0)",
               }}
             />
-            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
+            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b-lg bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
                 York
               </p>
@@ -173,7 +173,7 @@ function IndexPage() {
           </figure>
           <figure className="relative">
             <StaticImage
-              className="rounded"
+              className="rounded-lg"
               src="../images/sam-knight-jhpL88kP7Y8-unsplash.jpg"
               width={494}
               aspectRatio={1}
@@ -184,7 +184,7 @@ function IndexPage() {
                 "-webkit-transform": "translate3d(0, 0, 0)",
               }}
             />
-            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b bg-gradient-to-t from-black">
+            <figcaption className="absolute bottom-0 w-full p-4 text-white rounded-b-lg bg-gradient-to-t from-black">
               <p className="text-sm font-semibold sm:text-base xl:text-lg xl:font-medium">
                 Sussex
               </p>

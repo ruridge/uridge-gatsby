@@ -43,7 +43,7 @@ function Snippets() {
       {data.allMdx.nodes
         .filter(({ parent }) => parent.sourceInstanceName === "snippets")
         .map((snippet) => (
-          <article className="p-4 mb-10 rounded shadow">
+          <article className="mb-10">
             <h2 className="mb-4 text-2xl font-bold">
               <Link
                 key={snippet.parent.name}

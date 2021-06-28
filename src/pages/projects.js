@@ -76,12 +76,17 @@ function ProjectsPage() {
               <GatsbyImage
                 image={getImage(project.frontmatter.image)}
                 alt=""
-                className="border border-gray-200 rounded dark:border-gray-900 md:shadow-md"
+                className="border border-gray-200 rounded-lg dark:border-gray-700 md:shadow-md"
+                style={{
+                  // fix for rounding images bug in Safari
+                  "-webkit-backface-visibility": "hidden",
+                  "-webkit-transform": "translate3d(0, 0, 0)",
+                }}
               />
             </div>
             <div
               className={classNames(
-                "md:relative md:w-96 flex-none md:px-8 py-6 md:rounded md:shadow-2xl md:bg-white md:top-10 md:dark:bg-gray-900",
+                "md:relative md:w-96 flex-none md:px-8 py-6 md:rounded-lg md:shadow-2xl md:bg-white md:top-10 md:dark:bg-gray-900",
                 projectClasses.copy(index)
               )}
             >
