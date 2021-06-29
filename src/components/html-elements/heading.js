@@ -21,7 +21,11 @@ const COLOR_MAP = {
   [Color.PINK]: "text-pink-600 dark:text-pink-500",
   [Color.PURPLE]: "text-purple-600 dark:text-purple-400",
 };
+const Size = {
+  TITAN: "titan",
+};
 const SIZE_MAP = {
+  [Size.TITAN]: "text-6xl font-bold lg:text-8xl",
   1: "text-4xl font-extrabold sm:text-5xl",
   2: "text-2xl font-extrabold sm:text-3xl",
   3: "text-xl font-extrabold sm:text-2xl",
@@ -47,7 +51,7 @@ export function Heading({ children, level, size = null, color }) {
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
-  size: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  size: PropTypes.oneOf([1, 2, 3, 4, 5, 6, "titan"]),
   color: PropTypes.oneOf(["gray", "green", "pink", "purple"]),
 };
 
@@ -56,3 +60,4 @@ Heading.defaultProps = {
 };
 
 Heading.color = Color;
+Heading.size = Size;

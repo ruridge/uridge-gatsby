@@ -6,11 +6,13 @@ const Size = {
   SMALL: "small",
   MEDIUM: "medium",
   LARGE: "large",
+  XL: "xl",
 };
 const SIZE_MAPS = {
   [Size.SMALL]: "text-xs sm:text-sm",
   [Size.MEDIUM]: "text-base sm:text-lg",
   [Size.LARGE]: "text-xl sm:text-2xl",
+  [Size.XL]: "text-3xl lg:text-4xl",
 };
 
 export function Paragraph({ children, size, maxWidthProse }) {
@@ -29,7 +31,7 @@ export function Paragraph({ children, size, maxWidthProse }) {
 
 Paragraph.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  size: PropTypes.oneOf(["small", "medium", "large", "xl"]),
   maxWidthProse: PropTypes.bool,
 };
 
