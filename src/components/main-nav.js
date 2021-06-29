@@ -199,7 +199,7 @@ function MainNav() {
                           );
                         })}
                       </div>
-                      <div className="p-4 dark:text-gray-100">
+                      <div className="px-4 dark:text-gray-100">
                         <Footer />
                       </div>
                     </div>

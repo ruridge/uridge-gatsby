@@ -4,6 +4,7 @@ import { MailOpenIcon } from "@heroicons/react/outline";
 import TwitterIcon from "../images/svg/twitter.inline.svg";
 import GithubIcon from "../images/svg/github.inline.svg";
 import LinkedinIcon from "../images/svg/linkedin-icon.inline.svg";
+import { Paragraph } from "../components/html-elements";
 
 const iconClassNames =
   "text-gray-400 hover:text-gray-500 p-3 dark:hover:text-gray-100";
@@ -45,7 +46,7 @@ const Footer = () => {
           <MailOpenIcon className="block w-6 h-6" aria-hidden="true" />
         </a>
       </div>
-      <div>
+      <Paragraph size={Paragraph.size.SMALL}>
         This site is{" "}
         <a href="https://github.com/roburidge/uridge-gatsby">
           built in the open
@@ -54,11 +55,9 @@ const Footer = () => {
         <a href="https://www.gatsbyjs.com/">Gatsby</a>,{" "}
         <a href="https://tailwindcss.com/">Tailwind CSS</a>, and hosted with{" "}
         <a href="https://www.gatsbyjs.com/products/cloud/">Gatsby Cloud</a>.
-      </div>
-      ~
-      <div>
+        <br />~<br />
         Copyright © {new Date().getFullYear()} {siteTitle}. All Rights Reserved.{" "}
-      </div>
+      </Paragraph>
     </footer>
   );
 };
