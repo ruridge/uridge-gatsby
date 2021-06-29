@@ -30,7 +30,7 @@ const SIZE_MAP = {
   6: "text-sm font-black sm:text-base",
 };
 
-function Heading({ children, level, size = null, color }) {
+export function Heading({ children, level, size = null, color }) {
   if (size == null) {
     size = [1, 2, 3, 4, 5, 6][level - 1];
   }
@@ -56,5 +56,3 @@ Heading.defaultProps = {
 };
 
 Heading.color = Color;
-
-export default Heading;

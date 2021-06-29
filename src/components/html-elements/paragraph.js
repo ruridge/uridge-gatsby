@@ -13,7 +13,7 @@ const SIZE_MAPS = {
   [Size.LARGE]: "text-xl sm:text-2xl",
 };
 
-function Paragraph({ children, size, maxWidthProse }) {
+export function Paragraph({ children, size, maxWidthProse }) {
   return (
     <p
       className={classNames(
@@ -39,5 +39,3 @@ Paragraph.defaultProps = {
 };
 
 Paragraph.size = Size;
-
-export default Paragraph;

@@ -3,7 +3,7 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/vsLight";
 import classNames from "../../utils/class-names";
 
-function CodeBlock(props) {
+export function CodeBlock(props) {
   const className = props.children.props.className || "";
   const matches = className.match(/language-(?<lang>.*)/);
   return (
@@ -36,5 +36,3 @@ function CodeBlock(props) {
     </Highlight>
   );
 }
-
-export default CodeBlock;

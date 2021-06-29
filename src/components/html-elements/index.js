@@ -1,5 +1,3 @@
-import Paragraph from "./paragraph";
-import Heading from "./heading";
-import CodeBlock from "./code-block";
-
-export { Paragraph, Heading, CodeBlock };
+export { Paragraph } from "./paragraph";
+export { Heading } from "./heading";
+export { CodeBlock } from "./code-block";
