@@ -19,8 +19,11 @@ export function CodeBlock(props) {
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
-          className={classNames(className, "rounded-md border mb-4 lg:mb-6")}
-          style={{ ...style, padding: "20px" }}
+          className={classNames(
+            className,
+            "rounded-lg border mb-4 lg:mb-6 p-5 overflow-auto"
+          )}
+          style={style}
         >
           <div>
             {tokens.map((line, i) => (
