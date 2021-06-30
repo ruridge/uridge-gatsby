@@ -4,15 +4,25 @@ import lightTheme from "prism-react-renderer/themes/vsLight";
 import darkTheme from "prism-react-renderer/themes/nightOwl";
 import classNames from "../../utils/class-names";
 
-function getTheme() {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? darkTheme
-    : lightTheme;
+function getOsPreferredColorScheme() {
+  const osPreferredColorScheme = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches
+    ? "dark"
+    : "light";
+  return osPreferredColorScheme || "light";
 }
 
 export function CodeBlock(props) {
   const className = props.children.props.className || "";
   const matches = className.match(/language-(?<lang>.*)/);
+
+  const [theme, setTheme] = React.useState("light");
+
+  React.useEffect(() => {
+    setTheme(getOsPreferredColorScheme());
+  }, []);
+
   return (
     <Highlight
       {...defaultProps}
@@ -22,7 +32,7 @@ export function CodeBlock(props) {
           ? matches.groups.lang
           : ""
       }
-      theme={getTheme()}
+      theme={theme === "light" ? lightTheme : darkTheme}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
