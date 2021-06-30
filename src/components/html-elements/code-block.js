@@ -1,7 +1,14 @@
 import * as React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/vsLight";
+import lightTheme from "prism-react-renderer/themes/vsLight";
+import darkTheme from "prism-react-renderer/themes/nightOwl";
 import classNames from "../../utils/class-names";
+
+function getTheme() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? darkTheme
+    : lightTheme;
+}
 
 export function CodeBlock(props) {
   const className = props.children.props.className || "";
@@ -15,7 +22,7 @@ export function CodeBlock(props) {
           ? matches.groups.lang
           : ""
       }
-      theme={theme}
+      theme={getTheme()}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
