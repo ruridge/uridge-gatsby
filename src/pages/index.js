@@ -20,7 +20,7 @@ function IndexPage() {
             You found my new website! This is very much a work in progress. I'm
             working on it in the open, so if you're interested in peeking behind
             the curtain you can{" "}
-            <a href="https://github.com/roburidge/uridge-gatsby">
+            <a href="https://github.com/ruridge/uridge-gatsby">
               view the source on GitHub
             </a>
             .

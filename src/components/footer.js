@@ -22,7 +22,7 @@ const Footer = () => {
             viewBox="-2 -2 28 28"
           />
         </a>
-        <a href="https://github.com/roburidge/" className={iconClassNames}>
+        <a href="https://github.com/ruridge/" className={iconClassNames}>
           <span className="sr-only">GitHub</span>
           <GithubIcon
             className="w-6 h-6"
@@ -31,7 +31,7 @@ const Footer = () => {
           />
         </a>
         <a
-          href="https://www.linkedin.com/in/roburidge/"
+          href="https://www.linkedin.com/in/ruridge/"
           className={iconClassNames}
         >
           <span className="sr-only">LinkedIn</span>
@@ -48,9 +48,7 @@ const Footer = () => {
       </div>
       <Paragraph size={Paragraph.size.SMALL}>
         This site is{" "}
-        <a href="https://github.com/roburidge/uridge-gatsby">
-          built in the open
-        </a>{" "}
+        <a href="https://github.com/ruridge/uridge-gatsby">built in the open</a>{" "}
         using <a href="https://reactjs.org/">React</a>,{" "}
         <a href="https://www.gatsbyjs.com/">Gatsby</a>,{" "}
         <a href="https://tailwindcss.com/">Tailwind CSS</a>, and hosted with{" "}
