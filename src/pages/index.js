@@ -35,9 +35,9 @@ function IndexPage() {
             className="rounded-lg"
             src="../images/rob-head-shot-profile-photo.jpg"
             alt="Photo of Robert"
+            loading="eager"
             width={274}
             aspectRatio={1}
-            formats={["auto", "webp", "avif"]}
             style={{
               // fix for rounding images bug in Safari
               "-webkit-backface-visibility": "hidden",
@@ -97,7 +97,7 @@ function IndexPage() {
               className="rounded"
               src="../images/timo-volz-9-JFZIORoRw-unsplash.jpg"
               width={992}
-              formats={["auto", "webp", "avif"]}
+              height={662}
               style={{
                 // fix for rounding images bug in Safari
                 "-webkit-backface-visibility": "hidden",
@@ -117,7 +117,6 @@ function IndexPage() {
               src="../images/sam-rudkin-millichamp-sb6bReNb9ng-unsplash.jpg"
               width={494}
               aspectRatio={1}
-              formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari
                 "-webkit-backface-visibility": "hidden",
@@ -137,7 +136,6 @@ function IndexPage() {
               src="../images/gary-butterfield--lIVRZolbtM-unsplash.jpg"
               width={494}
               aspectRatio={1}
-              formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari
                 "-webkit-backface-visibility": "hidden",
@@ -157,7 +155,6 @@ function IndexPage() {
               src="../images/karl-moran-JBJmXBiCBPk-unsplash.jpg"
               width={494}
               aspectRatio={1}
-              formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari
                 "-webkit-backface-visibility": "hidden",
@@ -177,7 +174,6 @@ function IndexPage() {
               src="../images/sam-knight-jhpL88kP7Y8-unsplash.jpg"
               width={494}
               aspectRatio={1}
-              formats={["auto", "webp", "avif"]}
               style={{
                 // fix for rounding images bug in Safari
                 "-webkit-backface-visibility": "hidden",

@@ -83,7 +83,14 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: ["auto", "webp", "avif"],
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-react-svg",
