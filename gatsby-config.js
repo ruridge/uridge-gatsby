@@ -1,5 +1,5 @@
 module.exports = {
-  flags: { PRESERVE_WEBPACK_CACHE: true },
+  flags: {},
   siteMetadata: {
     siteTitle: "Robert Uridge",
     siteUrl: "https://www.uridge.com",
