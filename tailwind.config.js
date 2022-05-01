@@ -1,6 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: "media", // or false or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       backdropBlur: {
@@ -12,9 +11,6 @@ module.exports = {
         "theme-dark": "#151c2a",
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

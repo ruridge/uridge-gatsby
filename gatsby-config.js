@@ -53,21 +53,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        sitemap: "https://www.uridge.com/sitemap-index.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
-        env: {
-          development: {
-            policy: [{ userAgent: "*", disallow: "/" }],
-          },
-          production: {
-            policy: [{ userAgent: "*", allow: "/" }],
-          },
-        },
-      },
-    },
-    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Robert Uridge",
