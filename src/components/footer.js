@@ -47,14 +47,12 @@ const Footer = () => {
         </a>
       </div>
       <Paragraph size={Paragraph.size.SMALL}>
-        This site is{" "}
-        <a href="https://github.com/ruridge/uridge-gatsby">built in the open</a>{" "}
-        using <a href="https://reactjs.org/">React</a>,{" "}
-        <a href="https://www.gatsbyjs.com/">Gatsby</a>,{" "}
-        <a href="https://tailwindcss.com/">Tailwind CSS</a>, and hosted with{" "}
-        <a href="https://www.gatsbyjs.com/products/cloud/">Gatsby Cloud</a>.
+        <a href="https://github.com/ruridge/uridge-gatsby">Built in the open</a>{" "}
+        using <a href="https://tailwindcss.com/">Tailwind</a> and{" "}
+        <a href="https://www.gatsbyjs.com/">Gatsby</a>, hosted with{" "}
+        <a href="https://www.gatsbyjs.com/products/cloud/">Gatsby CLoud</a>.
         <br />~<br />
-        Copyright © {new Date().getFullYear()} {siteTitle}. All Rights Reserved.{" "}
+        Copyright © {new Date().getFullYear()} {siteTitle}. All Rights Reserved.
       </Paragraph>
     </footer>
   );

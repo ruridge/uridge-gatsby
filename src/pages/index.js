@@ -31,19 +31,15 @@ function IndexPage() {
           </Paragraph>
         </div>
         <div className="self-center hidden md:block">
-          <StaticImage
-            className="rounded-lg"
-            src="../images/rob-head-shot-profile-photo.jpg"
-            alt="Photo of Robert"
-            loading="eager"
-            width={274}
-            aspectRatio={1}
-            style={{
-              // fix for rounding images bug in Safari
-              "-webkit-backface-visibility": "hidden",
-              "-webkit-transform": "translate3d(0, 0, 0)",
-            }}
-          />
+          <div className="overflow-clip rounded-xl drop-shadow-xl">
+            <StaticImage
+              src="../images/rob-head-shot-profile-photo.jpg"
+              alt="Photo of Robert"
+              loading="eager"
+              width={274}
+              aspectRatio={1}
+            />
+          </div>
         </div>
       </article>
       <div className="grid gap-6 mb-10 md:gap-10 sm:grid-cols-2 md:mb-20">
