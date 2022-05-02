@@ -31,7 +31,7 @@ function IndexPage() {
           </Paragraph>
         </div>
         <div className="self-center hidden md:block">
-          <div className="overflow-hidden rounded-xl drop-shadow-xl">
+          <div className="overflow-hidden shadow-xl rounded-xl">
             <StaticImage
               src="../images/rob-head-shot-profile-photo.jpg"
               alt="Photo of Robert"
