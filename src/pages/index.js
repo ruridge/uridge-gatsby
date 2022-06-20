@@ -31,14 +31,16 @@ function IndexPage() {
           </Paragraph>
         </div>
         <div className="self-center hidden md:block">
-          <div className="overflow-hidden shadow-xl rounded-xl">
-            <StaticImage
+          <div className="shadow-xl rounded-xl">
+            <img src="./images/rob-head-shot-profile-photo.jpg" alt="" />
+            {/* <StaticImage
+              className=""
               src="../images/rob-head-shot-profile-photo.jpg"
               alt="Photo of Robert"
               loading="eager"
               width={274}
               aspectRatio={1}
-            />
+            /> */}
           </div>
         </div>
       </article>
@@ -87,10 +89,9 @@ function IndexPage() {
           </span>
         </Paragraph>
 
-        <div className="grid grid-cols-2 gap-1">
-          <figure className="relative col-span-2">
+        <div className="grid grid-cols-2 gap-5">
+          <figure className="relative col-span-2 overflow-hidden shadow-xl rounded-xl">
             <StaticImage
-              className="rounded"
               src="../images/timo-volz-9-JFZIORoRw-unsplash.jpg"
               width={992}
               height={662}
