@@ -41,16 +41,12 @@ const Footer = () => {
             viewBox="-2 -2 28 28"
           />
         </a>
-        <a href="mailto:rob@uridge.com" className={iconClassNames}>
+        <a href="mailto:wicker_endings03@icloud.com" className={iconClassNames}>
           <span className="sr-only">Email me</span>
           <MailOpenIcon className="block w-6 h-6" aria-hidden="true" />
         </a>
       </div>
       <Paragraph size={Paragraph.size.SMALL}>
-        <a href="https://github.com/ruridge/uridge-gatsby">Built in the open</a>{" "}
-        using <a href="https://tailwindcss.com/">Tailwind</a> and{" "}
-        <a href="https://www.gatsbyjs.com/">Gatsby</a>, hosted with{" "}
-        <a href="https://www.gatsbyjs.com/products/cloud/">Gatsby CLoud</a>.
         <br />~<br />
         Copyright © {new Date().getFullYear()} {siteTitle}. All Rights Reserved.
       </Paragraph>
