@@ -1,10 +1,7 @@
 import * as React from "react";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
-import { MailOpenIcon } from "@heroicons/react/outline";
-import TwitterIcon from "../images/svg/twitter.inline.svg";
-import GithubIcon from "../images/svg/github.inline.svg";
-import LinkedinIcon from "../images/svg/linkedin-icon.inline.svg";
 import { Paragraph } from "../components/html-elements";
+import { Icon } from "@iconify-icon/react";
 
 const iconClassNames =
   "text-gray-400 hover:text-gray-500 p-3 dark:hover:text-gray-100";
@@ -14,36 +11,28 @@ const Footer = () => {
   return (
     <footer className="text-xs text-center sm:text-sm">
       <div className="flex justify-center gap-2 mb-3">
-        <a href="https://twitter.com/roburidge/" className={iconClassNames}>
+        <a
+          rel="me"
+          href="https://social.treehouse.systems/@rob"
+          className={iconClassNames}
+        >
           <span className="sr-only">Twitter</span>
-          <TwitterIcon
-            className="w-6 h-6"
-            fill="currentColor"
-            viewBox="-2 -2 28 28"
-          />
+          <Icon icon="mdi:mastodon" height={24} />
         </a>
         <a href="https://github.com/ruridge/" className={iconClassNames}>
           <span className="sr-only">GitHub</span>
-          <GithubIcon
-            className="w-6 h-6"
-            fill="currentColor"
-            viewBox="-2 -2 28 28"
-          />
+          <Icon icon="mdi:github" height={24} />
         </a>
         <a
           href="https://www.linkedin.com/in/ruridge/"
           className={iconClassNames}
         >
           <span className="sr-only">LinkedIn</span>
-          <LinkedinIcon
-            className="w-6 h-6"
-            fill="currentColor"
-            viewBox="-2 -2 28 28"
-          />
+          <Icon icon="mdi:linkedin" height={24} />
         </a>
         <a href="mailto:wicker_endings03@icloud.com" className={iconClassNames}>
           <span className="sr-only">Email me</span>
-          <MailOpenIcon className="block w-6 h-6" aria-hidden="true" />
+          <Icon icon="ion:mail-open" height={24} />
         </a>
       </div>
       <Paragraph size={Paragraph.size.SMALL}>
