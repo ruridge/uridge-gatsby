@@ -16,14 +16,15 @@ const Footer = () => {
           href="https://social.treehouse.systems/@rob"
           className={iconClassNames}
         >
-          <span className="sr-only">Twitter</span>
+          <span className="sr-only">Mastodon</span>
           <Icon icon="mdi:mastodon" height={24} />
         </a>
-        <a href="https://github.com/ruridge/" className={iconClassNames}>
+        <a rel="me" href="https://github.com/ruridge/" className={iconClassNames}>
           <span className="sr-only">GitHub</span>
           <Icon icon="mdi:github" height={24} />
         </a>
         <a
+          rel="me"
           href="https://www.linkedin.com/in/ruridge/"
           className={iconClassNames}
         >
